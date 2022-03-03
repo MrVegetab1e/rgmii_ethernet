@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="len_fifo_synth_1" LaunchDir="D:/demo_ax7101/demo/eth_1g_100m/15_ethernet_test/rgmii_ethernet/eth_test.runs/len_fifo_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="eth_data_fifo_synth_1" LaunchDir="D:/demo_ax7101/demo/eth_1g_100m/15_ethernet_test/rgmii_ethernet/eth_test.runs/eth_data_fifo_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="synth_1" LaunchDir="D:/demo_ax7101/demo/eth_1g_100m/15_ethernet_test/rgmii_ethernet/eth_test.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="len_fifo_synth_1"/>
+		<Parent Id="eth_data_fifo_synth_1"/>
+	</Run>
+</Runs>
+

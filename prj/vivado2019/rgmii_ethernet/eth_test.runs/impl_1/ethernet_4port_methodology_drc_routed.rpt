@@ -1,0 +1,524 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Thu Mar  3 15:15:49 2022
+| Host         : DESKTOP-TKQ356Q running 64-bit major release  (build 9200)
+| Command      : report_methodology -file ethernet_4port_methodology_drc_routed.rpt -pb ethernet_4port_methodology_drc_routed.pb -rpx ethernet_4port_methodology_drc_routed.rpx
+| Design       : ethernet_4port
+| Device       : xc7z020clg484-2
+| Speed File   : -2
+| Design State : Fully Routed
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 97
++-----------+----------+----------------------------------+------------+
+| Rule      | Severity | Description                      | Violations |
++-----------+----------+----------------------------------+------------+
+| LUTAR-1   | Warning  | LUT drives async reset alert     | 32         |
+| TIMING-9  | Warning  | Unknown CDC Logic                | 1          |
+| TIMING-10 | Warning  | Missing property on synchronizer | 1          |
+| TIMING-18 | Warning  | Missing input or output delay    | 59         |
+| TIMING-20 | Warning  | Non-clocked latch                | 4          |
++-----------+----------+----------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+LUTAR-1#1 Warning
+LUT drives async reset alert  
+LUT cell u1/arbi_inst/e_rst_n_INST_0, with 2 or more inputs, drives asynchronous preset/clear pin(s) u1/mac_test0/almost_full_d0_reg/CLR, u1/mac_test0/almost_full_d1_reg/CLR, u1/mac_test0/gmii_rx_dv_d0_reg/CLR, u1/mac_test0/gmii_rxd_d0_reg[0]/CLR, u1/mac_test0/gmii_rxd_d0_reg[1]/CLR, u1/mac_test0/gmii_rxd_d0_reg[2]/CLR, u1/mac_test0/gmii_rxd_d0_reg[3]/CLR, u1/mac_test0/gmii_rxd_d0_reg[4]/CLR, u1/mac_test0/gmii_rxd_d0_reg[5]/CLR, u1/mac_test0/gmii_rxd_d0_reg[6]/CLR, u1/mac_test0/gmii_rxd_d0_reg[7]/CLR, u1/mac_test0/gmii_tx_en_reg/CLR, u1/mac_test0/gmii_txd_reg[0]/CLR, u1/mac_test0/gmii_txd_reg[1]/CLR, u1/mac_test0/gmii_txd_reg[2]/CLR (the first 15 of 2746 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#2 Warning
+LUT drives async reset alert  
+LUT cell u1/arbi_inst/rx_buffer_inst/FSM_onehot_state[1]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) u1/arbi_inst/e_rst_cnt_reg[0]/CLR, u1/arbi_inst/e_rst_cnt_reg[1]/CLR, u1/arbi_inst/e_rst_cnt_reg[2]/CLR, u1/arbi_inst/e_rst_cnt_reg[3]/CLR, u1/arbi_inst/e_rst_cnt_reg[4]/CLR, u1/arbi_inst/e_rst_cnt_reg[5]/CLR, u1/arbi_inst/e_rst_cnt_reg[6]/CLR, u1/arbi_inst/e_rst_cnt_reg[7]/CLR, u1/arbi_inst/e_rx_dv_reg/CLR, u1/arbi_inst/e_rxd_reg[0]/CLR, u1/arbi_inst/e_rxd_reg[1]/CLR, u1/arbi_inst/e_rxd_reg[2]/CLR, u1/arbi_inst/e_rxd_reg[3]/CLR, u1/arbi_inst/e_rxd_reg[4]/CLR, u1/arbi_inst/e_rxd_reg[5]/CLR (the first 15 of 45 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#3 Warning
+LUT drives async reset alert  
+LUT cell u1/arbi_inst/rx_buffer_inst/rx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_3, with 2 or more inputs, drives asynchronous preset/clear pin(s) u1/arbi_inst/rx_buffer_inst/rx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[0]/CLR, u1/arbi_inst/rx_buffer_inst/rx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[10]/CLR, u1/arbi_inst/rx_buffer_inst/rx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[11]/CLR, u1/arbi_inst/rx_buffer_inst/rx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[1]/CLR, u1/arbi_inst/rx_buffer_inst/rx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[2]/CLR, u1/arbi_inst/rx_buffer_inst/rx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[3]/CLR, u1/arbi_inst/rx_buffer_inst/rx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[4]/CLR, u1/arbi_inst/rx_buffer_inst/rx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[5]/CLR, u1/arbi_inst/rx_buffer_inst/rx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[6]/CLR, u1/arbi_inst/rx_buffer_inst/rx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[7]/CLR, u1/arbi_inst/rx_buffer_inst/rx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[8]/CLR, u1/arbi_inst/rx_buffer_inst/rx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[9]/CLR, u1/arbi_inst/rx_buffer_inst/rx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_fb_i_reg/PRE, u1/arbi_inst/rx_buffer_inst/rx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_i_reg/PRE, u1/arbi_inst/rx_buffer_inst/rx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[0]/CLR (the first 15 of 62 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#4 Warning
+LUT drives async reset alert  
+LUT cell u1/arbi_inst/rx_buffer_inst/rx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram_i_3, with 2 or more inputs, drives asynchronous preset/clear pin(s) u1/arbi_inst/rx_buffer_inst/rx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[0]/CLR, u1/arbi_inst/rx_buffer_inst/rx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[1]/CLR, u1/arbi_inst/rx_buffer_inst/rx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[2]/CLR, u1/arbi_inst/rx_buffer_inst/rx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[3]/CLR, u1/arbi_inst/rx_buffer_inst/rx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[4]/CLR, u1/arbi_inst/rx_buffer_inst/rx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_fb_i_reg/PRE, u1/arbi_inst/rx_buffer_inst/rx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_i_reg/PRE, u1/arbi_inst/rx_buffer_inst/rx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[0]/CLR, u1/arbi_inst/rx_buffer_inst/rx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[1]/CLR, u1/arbi_inst/rx_buffer_inst/rx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[2]/CLR, u1/arbi_inst/rx_buffer_inst/rx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[3]/CLR, u1/arbi_inst/rx_buffer_inst/rx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[4]/CLR, u1/arbi_inst/rx_buffer_inst/rx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_reg[1]/CLR, u1/arbi_inst/rx_buffer_inst/rx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_reg[2]/CLR, u1/arbi_inst/rx_buffer_inst/rx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_reg[3]/CLR (the first 15 of 27 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#5 Warning
+LUT drives async reset alert  
+LUT cell u1/arbi_inst/tx_buffer_inst/tx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_3, with 2 or more inputs, drives asynchronous preset/clear pin(s) u1/arbi_inst/tx_buffer_inst/tx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[0]/CLR, u1/arbi_inst/tx_buffer_inst/tx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[10]/CLR, u1/arbi_inst/tx_buffer_inst/tx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[11]/CLR, u1/arbi_inst/tx_buffer_inst/tx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[1]/CLR, u1/arbi_inst/tx_buffer_inst/tx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[2]/CLR, u1/arbi_inst/tx_buffer_inst/tx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[3]/CLR, u1/arbi_inst/tx_buffer_inst/tx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[4]/CLR, u1/arbi_inst/tx_buffer_inst/tx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[5]/CLR, u1/arbi_inst/tx_buffer_inst/tx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[6]/CLR, u1/arbi_inst/tx_buffer_inst/tx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[7]/CLR, u1/arbi_inst/tx_buffer_inst/tx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[8]/CLR, u1/arbi_inst/tx_buffer_inst/tx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[9]/CLR, u1/arbi_inst/tx_buffer_inst/tx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_fb_i_reg/PRE, u1/arbi_inst/tx_buffer_inst/tx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_i_reg/PRE, u1/arbi_inst/tx_buffer_inst/tx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[0]/CLR (the first 15 of 62 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#6 Warning
+LUT drives async reset alert  
+LUT cell u1/arbi_inst/tx_buffer_inst/tx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram_i_3, with 2 or more inputs, drives asynchronous preset/clear pin(s) u1/arbi_inst/tx_buffer_inst/tx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[0]/CLR, u1/arbi_inst/tx_buffer_inst/tx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[1]/CLR, u1/arbi_inst/tx_buffer_inst/tx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[2]/CLR, u1/arbi_inst/tx_buffer_inst/tx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[3]/CLR, u1/arbi_inst/tx_buffer_inst/tx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[4]/CLR, u1/arbi_inst/tx_buffer_inst/tx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_fb_i_reg/PRE, u1/arbi_inst/tx_buffer_inst/tx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_i_reg/PRE, u1/arbi_inst/tx_buffer_inst/tx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[0]/CLR, u1/arbi_inst/tx_buffer_inst/tx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[1]/CLR, u1/arbi_inst/tx_buffer_inst/tx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[2]/CLR, u1/arbi_inst/tx_buffer_inst/tx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[3]/CLR, u1/arbi_inst/tx_buffer_inst/tx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[4]/CLR, u1/arbi_inst/tx_buffer_inst/tx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_reg[1]/CLR, u1/arbi_inst/tx_buffer_inst/tx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_reg[2]/CLR, u1/arbi_inst/tx_buffer_inst/tx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_reg[3]/CLR (the first 15 of 27 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#7 Warning
+LUT drives async reset alert  
+LUT cell u1/reset_m0/cnt[0]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) u1/smi_config_inst/FSM_sequential_state_reg[3]/CLR, u1/smi_config_inst/led_reg[1]/CLR, u1/smi_config_inst/led_reg[2]/CLR, u1/smi_config_inst/led_reg[3]/CLR, u1/smi_config_inst/link_reg/CLR, u1/smi_config_inst/phy_init_end_reg/CLR, u1/smi_config_inst/read_req_reg/CLR, u1/smi_config_inst/reg_addr_reg[0]/CLR, u1/smi_config_inst/reg_addr_reg[4]/CLR, u1/smi_config_inst/timer_reg[0]/CLR, u1/smi_config_inst/timer_reg[10]/CLR, u1/smi_config_inst/timer_reg[11]/CLR, u1/smi_config_inst/timer_reg[12]/CLR, u1/smi_config_inst/timer_reg[13]/CLR, u1/smi_config_inst/timer_reg[14]/CLR (the first 15 of 72 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#8 Warning
+LUT drives async reset alert  
+LUT cell u1/smi_config_inst/smi_inst/mdc_i_3, with 2 or more inputs, drives asynchronous preset/clear pin(s) u1/smi_config_inst/smi_inst/FSM_onehot_state_reg[1]/CLR, u1/smi_config_inst/smi_inst/FSM_onehot_state_reg[2]/CLR, u1/smi_config_inst/smi_inst/FSM_onehot_state_reg[3]/CLR, u1/smi_config_inst/smi_inst/FSM_onehot_state_reg[4]/CLR, u1/smi_config_inst/smi_inst/FSM_onehot_state_reg[5]/CLR, u1/smi_config_inst/smi_inst/FSM_onehot_state_reg[6]/CLR, u1/smi_config_inst/smi_inst/done_reg/CLR, u1/smi_config_inst/smi_inst/mdc_cnt_reg[0]/CLR, u1/smi_config_inst/smi_inst/mdc_cnt_reg[10]/CLR, u1/smi_config_inst/smi_inst/mdc_cnt_reg[11]/CLR, u1/smi_config_inst/smi_inst/mdc_cnt_reg[12]/CLR, u1/smi_config_inst/smi_inst/mdc_cnt_reg[13]/CLR, u1/smi_config_inst/smi_inst/mdc_cnt_reg[14]/CLR, u1/smi_config_inst/smi_inst/mdc_cnt_reg[15]/CLR, u1/smi_config_inst/smi_inst/mdc_cnt_reg[1]/CLR (the first 15 of 51 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#9 Warning
+LUT drives async reset alert  
+LUT cell u2/arbi_inst/e_rst_n_INST_0, with 2 or more inputs, drives asynchronous preset/clear pin(s) u2/mac_test0/almost_full_d0_reg/CLR, u2/mac_test0/almost_full_d1_reg/CLR, u2/mac_test0/gmii_rx_dv_d0_reg/CLR, u2/mac_test0/gmii_rxd_d0_reg[0]/CLR, u2/mac_test0/gmii_rxd_d0_reg[1]/CLR, u2/mac_test0/gmii_rxd_d0_reg[2]/CLR, u2/mac_test0/gmii_rxd_d0_reg[3]/CLR, u2/mac_test0/gmii_rxd_d0_reg[4]/CLR, u2/mac_test0/gmii_rxd_d0_reg[5]/CLR, u2/mac_test0/gmii_rxd_d0_reg[6]/CLR, u2/mac_test0/gmii_rxd_d0_reg[7]/CLR, u2/mac_test0/gmii_tx_en_reg/CLR, u2/mac_test0/gmii_txd_reg[0]/CLR, u2/mac_test0/gmii_txd_reg[1]/CLR, u2/mac_test0/gmii_txd_reg[2]/CLR (the first 15 of 2746 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#10 Warning
+LUT drives async reset alert  
+LUT cell u2/arbi_inst/rx_buffer_inst/FSM_onehot_state[1]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) u2/arbi_inst/e_rst_cnt_reg[0]/CLR, u2/arbi_inst/e_rst_cnt_reg[1]/CLR, u2/arbi_inst/e_rst_cnt_reg[2]/CLR, u2/arbi_inst/e_rst_cnt_reg[3]/CLR, u2/arbi_inst/e_rst_cnt_reg[4]/CLR, u2/arbi_inst/e_rst_cnt_reg[5]/CLR, u2/arbi_inst/e_rst_cnt_reg[6]/CLR, u2/arbi_inst/e_rst_cnt_reg[7]/CLR, u2/arbi_inst/e_rx_dv_reg/CLR, u2/arbi_inst/e_rxd_reg[0]/CLR, u2/arbi_inst/e_rxd_reg[1]/CLR, u2/arbi_inst/e_rxd_reg[2]/CLR, u2/arbi_inst/e_rxd_reg[3]/CLR, u2/arbi_inst/e_rxd_reg[4]/CLR, u2/arbi_inst/e_rxd_reg[5]/CLR (the first 15 of 45 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#11 Warning
+LUT drives async reset alert  
+LUT cell u2/arbi_inst/rx_buffer_inst/rx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_3, with 2 or more inputs, drives asynchronous preset/clear pin(s) u2/arbi_inst/rx_buffer_inst/rx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[0]/CLR, u2/arbi_inst/rx_buffer_inst/rx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[10]/CLR, u2/arbi_inst/rx_buffer_inst/rx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[11]/CLR, u2/arbi_inst/rx_buffer_inst/rx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[1]/CLR, u2/arbi_inst/rx_buffer_inst/rx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[2]/CLR, u2/arbi_inst/rx_buffer_inst/rx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[3]/CLR, u2/arbi_inst/rx_buffer_inst/rx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[4]/CLR, u2/arbi_inst/rx_buffer_inst/rx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[5]/CLR, u2/arbi_inst/rx_buffer_inst/rx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[6]/CLR, u2/arbi_inst/rx_buffer_inst/rx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[7]/CLR, u2/arbi_inst/rx_buffer_inst/rx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[8]/CLR, u2/arbi_inst/rx_buffer_inst/rx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[9]/CLR, u2/arbi_inst/rx_buffer_inst/rx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_fb_i_reg/PRE, u2/arbi_inst/rx_buffer_inst/rx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_i_reg/PRE, u2/arbi_inst/rx_buffer_inst/rx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[0]/CLR (the first 15 of 62 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#12 Warning
+LUT drives async reset alert  
+LUT cell u2/arbi_inst/rx_buffer_inst/rx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram_i_3, with 2 or more inputs, drives asynchronous preset/clear pin(s) u2/arbi_inst/rx_buffer_inst/rx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[0]/CLR, u2/arbi_inst/rx_buffer_inst/rx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[1]/CLR, u2/arbi_inst/rx_buffer_inst/rx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[2]/CLR, u2/arbi_inst/rx_buffer_inst/rx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[3]/CLR, u2/arbi_inst/rx_buffer_inst/rx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[4]/CLR, u2/arbi_inst/rx_buffer_inst/rx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_fb_i_reg/PRE, u2/arbi_inst/rx_buffer_inst/rx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_i_reg/PRE, u2/arbi_inst/rx_buffer_inst/rx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[0]/CLR, u2/arbi_inst/rx_buffer_inst/rx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[1]/CLR, u2/arbi_inst/rx_buffer_inst/rx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[2]/CLR, u2/arbi_inst/rx_buffer_inst/rx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[3]/CLR, u2/arbi_inst/rx_buffer_inst/rx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[4]/CLR, u2/arbi_inst/rx_buffer_inst/rx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_reg[1]/CLR, u2/arbi_inst/rx_buffer_inst/rx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_reg[2]/CLR, u2/arbi_inst/rx_buffer_inst/rx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_reg[3]/CLR (the first 15 of 27 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#13 Warning
+LUT drives async reset alert  
+LUT cell u2/arbi_inst/tx_buffer_inst/tx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_3, with 2 or more inputs, drives asynchronous preset/clear pin(s) u2/arbi_inst/tx_buffer_inst/tx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[0]/CLR, u2/arbi_inst/tx_buffer_inst/tx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[10]/CLR, u2/arbi_inst/tx_buffer_inst/tx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[11]/CLR, u2/arbi_inst/tx_buffer_inst/tx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[1]/CLR, u2/arbi_inst/tx_buffer_inst/tx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[2]/CLR, u2/arbi_inst/tx_buffer_inst/tx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[3]/CLR, u2/arbi_inst/tx_buffer_inst/tx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[4]/CLR, u2/arbi_inst/tx_buffer_inst/tx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[5]/CLR, u2/arbi_inst/tx_buffer_inst/tx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[6]/CLR, u2/arbi_inst/tx_buffer_inst/tx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[7]/CLR, u2/arbi_inst/tx_buffer_inst/tx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[8]/CLR, u2/arbi_inst/tx_buffer_inst/tx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[9]/CLR, u2/arbi_inst/tx_buffer_inst/tx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_fb_i_reg/PRE, u2/arbi_inst/tx_buffer_inst/tx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_i_reg/PRE, u2/arbi_inst/tx_buffer_inst/tx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[0]/CLR (the first 15 of 62 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#14 Warning
+LUT drives async reset alert  
+LUT cell u2/arbi_inst/tx_buffer_inst/tx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram_i_3, with 2 or more inputs, drives asynchronous preset/clear pin(s) u2/arbi_inst/tx_buffer_inst/tx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[0]/CLR, u2/arbi_inst/tx_buffer_inst/tx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[1]/CLR, u2/arbi_inst/tx_buffer_inst/tx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[2]/CLR, u2/arbi_inst/tx_buffer_inst/tx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[3]/CLR, u2/arbi_inst/tx_buffer_inst/tx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[4]/CLR, u2/arbi_inst/tx_buffer_inst/tx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_fb_i_reg/PRE, u2/arbi_inst/tx_buffer_inst/tx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_i_reg/PRE, u2/arbi_inst/tx_buffer_inst/tx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[0]/CLR, u2/arbi_inst/tx_buffer_inst/tx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[1]/CLR, u2/arbi_inst/tx_buffer_inst/tx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[2]/CLR, u2/arbi_inst/tx_buffer_inst/tx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[3]/CLR, u2/arbi_inst/tx_buffer_inst/tx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[4]/CLR, u2/arbi_inst/tx_buffer_inst/tx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_reg[1]/CLR, u2/arbi_inst/tx_buffer_inst/tx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_reg[2]/CLR, u2/arbi_inst/tx_buffer_inst/tx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_reg[3]/CLR (the first 15 of 27 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#15 Warning
+LUT drives async reset alert  
+LUT cell u2/reset_m0/cnt[0]_i_1__0, with 2 or more inputs, drives asynchronous preset/clear pin(s) u2/smi_config_inst/FSM_sequential_state_reg[3]/CLR, u2/smi_config_inst/led_reg[1]/CLR, u2/smi_config_inst/led_reg[2]/CLR, u2/smi_config_inst/led_reg[3]/CLR, u2/smi_config_inst/link_reg/CLR, u2/smi_config_inst/phy_init_end_reg/CLR, u2/smi_config_inst/read_req_reg/CLR, u2/smi_config_inst/reg_addr_reg[0]/CLR, u2/smi_config_inst/reg_addr_reg[4]/CLR, u2/smi_config_inst/timer_reg[0]/CLR, u2/smi_config_inst/timer_reg[10]/CLR, u2/smi_config_inst/timer_reg[11]/CLR, u2/smi_config_inst/timer_reg[12]/CLR, u2/smi_config_inst/timer_reg[13]/CLR, u2/smi_config_inst/timer_reg[14]/CLR (the first 15 of 72 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#16 Warning
+LUT drives async reset alert  
+LUT cell u2/smi_config_inst/smi_inst/mdc_i_3, with 2 or more inputs, drives asynchronous preset/clear pin(s) u2/smi_config_inst/smi_inst/FSM_onehot_state_reg[1]/CLR, u2/smi_config_inst/smi_inst/FSM_onehot_state_reg[2]/CLR, u2/smi_config_inst/smi_inst/FSM_onehot_state_reg[3]/CLR, u2/smi_config_inst/smi_inst/FSM_onehot_state_reg[4]/CLR, u2/smi_config_inst/smi_inst/FSM_onehot_state_reg[5]/CLR, u2/smi_config_inst/smi_inst/FSM_onehot_state_reg[6]/CLR, u2/smi_config_inst/smi_inst/done_reg/CLR, u2/smi_config_inst/smi_inst/mdc_cnt_reg[0]/CLR, u2/smi_config_inst/smi_inst/mdc_cnt_reg[10]/CLR, u2/smi_config_inst/smi_inst/mdc_cnt_reg[11]/CLR, u2/smi_config_inst/smi_inst/mdc_cnt_reg[12]/CLR, u2/smi_config_inst/smi_inst/mdc_cnt_reg[13]/CLR, u2/smi_config_inst/smi_inst/mdc_cnt_reg[14]/CLR, u2/smi_config_inst/smi_inst/mdc_cnt_reg[15]/CLR, u2/smi_config_inst/smi_inst/mdc_cnt_reg[1]/CLR (the first 15 of 51 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#17 Warning
+LUT drives async reset alert  
+LUT cell u3/arbi_inst/e_rst_n_INST_0, with 2 or more inputs, drives asynchronous preset/clear pin(s) u3/mac_test0/almost_full_d0_reg/CLR, u3/mac_test0/almost_full_d1_reg/CLR, u3/mac_test0/gmii_rx_dv_d0_reg/CLR, u3/mac_test0/gmii_rxd_d0_reg[0]/CLR, u3/mac_test0/gmii_rxd_d0_reg[1]/CLR, u3/mac_test0/gmii_rxd_d0_reg[2]/CLR, u3/mac_test0/gmii_rxd_d0_reg[3]/CLR, u3/mac_test0/gmii_rxd_d0_reg[4]/CLR, u3/mac_test0/gmii_rxd_d0_reg[5]/CLR, u3/mac_test0/gmii_rxd_d0_reg[6]/CLR, u3/mac_test0/gmii_rxd_d0_reg[7]/CLR, u3/mac_test0/gmii_tx_en_reg/CLR, u3/mac_test0/gmii_txd_reg[0]/CLR, u3/mac_test0/gmii_txd_reg[1]/CLR, u3/mac_test0/gmii_txd_reg[2]/CLR (the first 15 of 2746 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#18 Warning
+LUT drives async reset alert  
+LUT cell u3/arbi_inst/rx_buffer_inst/FSM_onehot_state[1]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) u3/arbi_inst/e_rst_cnt_reg[0]/CLR, u3/arbi_inst/e_rst_cnt_reg[1]/CLR, u3/arbi_inst/e_rst_cnt_reg[2]/CLR, u3/arbi_inst/e_rst_cnt_reg[3]/CLR, u3/arbi_inst/e_rst_cnt_reg[4]/CLR, u3/arbi_inst/e_rst_cnt_reg[5]/CLR, u3/arbi_inst/e_rst_cnt_reg[6]/CLR, u3/arbi_inst/e_rst_cnt_reg[7]/CLR, u3/arbi_inst/e_rx_dv_reg/CLR, u3/arbi_inst/e_rxd_reg[0]/CLR, u3/arbi_inst/e_rxd_reg[1]/CLR, u3/arbi_inst/e_rxd_reg[2]/CLR, u3/arbi_inst/e_rxd_reg[3]/CLR, u3/arbi_inst/e_rxd_reg[4]/CLR, u3/arbi_inst/e_rxd_reg[5]/CLR (the first 15 of 45 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#19 Warning
+LUT drives async reset alert  
+LUT cell u3/arbi_inst/rx_buffer_inst/rx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_3, with 2 or more inputs, drives asynchronous preset/clear pin(s) u3/arbi_inst/rx_buffer_inst/rx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[0]/CLR, u3/arbi_inst/rx_buffer_inst/rx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[10]/CLR, u3/arbi_inst/rx_buffer_inst/rx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[11]/CLR, u3/arbi_inst/rx_buffer_inst/rx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[1]/CLR, u3/arbi_inst/rx_buffer_inst/rx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[2]/CLR, u3/arbi_inst/rx_buffer_inst/rx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[3]/CLR, u3/arbi_inst/rx_buffer_inst/rx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[4]/CLR, u3/arbi_inst/rx_buffer_inst/rx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[5]/CLR, u3/arbi_inst/rx_buffer_inst/rx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[6]/CLR, u3/arbi_inst/rx_buffer_inst/rx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[7]/CLR, u3/arbi_inst/rx_buffer_inst/rx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[8]/CLR, u3/arbi_inst/rx_buffer_inst/rx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[9]/CLR, u3/arbi_inst/rx_buffer_inst/rx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_fb_i_reg/PRE, u3/arbi_inst/rx_buffer_inst/rx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_i_reg/PRE, u3/arbi_inst/rx_buffer_inst/rx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[0]/CLR (the first 15 of 62 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#20 Warning
+LUT drives async reset alert  
+LUT cell u3/arbi_inst/rx_buffer_inst/rx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram_i_3, with 2 or more inputs, drives asynchronous preset/clear pin(s) u3/arbi_inst/rx_buffer_inst/rx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[0]/CLR, u3/arbi_inst/rx_buffer_inst/rx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[1]/CLR, u3/arbi_inst/rx_buffer_inst/rx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[2]/CLR, u3/arbi_inst/rx_buffer_inst/rx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[3]/CLR, u3/arbi_inst/rx_buffer_inst/rx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[4]/CLR, u3/arbi_inst/rx_buffer_inst/rx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_fb_i_reg/PRE, u3/arbi_inst/rx_buffer_inst/rx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_i_reg/PRE, u3/arbi_inst/rx_buffer_inst/rx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[0]/CLR, u3/arbi_inst/rx_buffer_inst/rx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[1]/CLR, u3/arbi_inst/rx_buffer_inst/rx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[2]/CLR, u3/arbi_inst/rx_buffer_inst/rx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[3]/CLR, u3/arbi_inst/rx_buffer_inst/rx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[4]/CLR, u3/arbi_inst/rx_buffer_inst/rx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_reg[1]/CLR, u3/arbi_inst/rx_buffer_inst/rx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_reg[2]/CLR, u3/arbi_inst/rx_buffer_inst/rx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_reg[3]/CLR (the first 15 of 27 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#21 Warning
+LUT drives async reset alert  
+LUT cell u3/arbi_inst/tx_buffer_inst/tx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_3, with 2 or more inputs, drives asynchronous preset/clear pin(s) u3/arbi_inst/tx_buffer_inst/tx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[0]/CLR, u3/arbi_inst/tx_buffer_inst/tx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[10]/CLR, u3/arbi_inst/tx_buffer_inst/tx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[11]/CLR, u3/arbi_inst/tx_buffer_inst/tx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[1]/CLR, u3/arbi_inst/tx_buffer_inst/tx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[2]/CLR, u3/arbi_inst/tx_buffer_inst/tx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[3]/CLR, u3/arbi_inst/tx_buffer_inst/tx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[4]/CLR, u3/arbi_inst/tx_buffer_inst/tx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[5]/CLR, u3/arbi_inst/tx_buffer_inst/tx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[6]/CLR, u3/arbi_inst/tx_buffer_inst/tx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[7]/CLR, u3/arbi_inst/tx_buffer_inst/tx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[8]/CLR, u3/arbi_inst/tx_buffer_inst/tx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[9]/CLR, u3/arbi_inst/tx_buffer_inst/tx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_fb_i_reg/PRE, u3/arbi_inst/tx_buffer_inst/tx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_i_reg/PRE, u3/arbi_inst/tx_buffer_inst/tx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[0]/CLR (the first 15 of 62 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#22 Warning
+LUT drives async reset alert  
+LUT cell u3/arbi_inst/tx_buffer_inst/tx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram_i_3, with 2 or more inputs, drives asynchronous preset/clear pin(s) u3/arbi_inst/tx_buffer_inst/tx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[0]/CLR, u3/arbi_inst/tx_buffer_inst/tx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[1]/CLR, u3/arbi_inst/tx_buffer_inst/tx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[2]/CLR, u3/arbi_inst/tx_buffer_inst/tx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[3]/CLR, u3/arbi_inst/tx_buffer_inst/tx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[4]/CLR, u3/arbi_inst/tx_buffer_inst/tx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_fb_i_reg/PRE, u3/arbi_inst/tx_buffer_inst/tx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_i_reg/PRE, u3/arbi_inst/tx_buffer_inst/tx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[0]/CLR, u3/arbi_inst/tx_buffer_inst/tx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[1]/CLR, u3/arbi_inst/tx_buffer_inst/tx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[2]/CLR, u3/arbi_inst/tx_buffer_inst/tx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[3]/CLR, u3/arbi_inst/tx_buffer_inst/tx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[4]/CLR, u3/arbi_inst/tx_buffer_inst/tx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_reg[1]/CLR, u3/arbi_inst/tx_buffer_inst/tx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_reg[2]/CLR, u3/arbi_inst/tx_buffer_inst/tx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_reg[3]/CLR (the first 15 of 27 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#23 Warning
+LUT drives async reset alert  
+LUT cell u3/reset_m0/cnt[0]_i_1__1, with 2 or more inputs, drives asynchronous preset/clear pin(s) u3/smi_config_inst/FSM_sequential_state_reg[3]/CLR, u3/smi_config_inst/led_reg[1]/CLR, u3/smi_config_inst/led_reg[2]/CLR, u3/smi_config_inst/led_reg[3]/CLR, u3/smi_config_inst/link_reg/CLR, u3/smi_config_inst/phy_init_end_reg/CLR, u3/smi_config_inst/read_req_reg/CLR, u3/smi_config_inst/reg_addr_reg[0]/CLR, u3/smi_config_inst/reg_addr_reg[4]/CLR, u3/smi_config_inst/timer_reg[0]/CLR, u3/smi_config_inst/timer_reg[10]/CLR, u3/smi_config_inst/timer_reg[11]/CLR, u3/smi_config_inst/timer_reg[12]/CLR, u3/smi_config_inst/timer_reg[13]/CLR, u3/smi_config_inst/timer_reg[14]/CLR (the first 15 of 72 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#24 Warning
+LUT drives async reset alert  
+LUT cell u3/smi_config_inst/smi_inst/mdc_i_3, with 2 or more inputs, drives asynchronous preset/clear pin(s) u3/smi_config_inst/smi_inst/FSM_onehot_state_reg[1]/CLR, u3/smi_config_inst/smi_inst/FSM_onehot_state_reg[2]/CLR, u3/smi_config_inst/smi_inst/FSM_onehot_state_reg[3]/CLR, u3/smi_config_inst/smi_inst/FSM_onehot_state_reg[4]/CLR, u3/smi_config_inst/smi_inst/FSM_onehot_state_reg[5]/CLR, u3/smi_config_inst/smi_inst/FSM_onehot_state_reg[6]/CLR, u3/smi_config_inst/smi_inst/done_reg/CLR, u3/smi_config_inst/smi_inst/mdc_cnt_reg[0]/CLR, u3/smi_config_inst/smi_inst/mdc_cnt_reg[10]/CLR, u3/smi_config_inst/smi_inst/mdc_cnt_reg[11]/CLR, u3/smi_config_inst/smi_inst/mdc_cnt_reg[12]/CLR, u3/smi_config_inst/smi_inst/mdc_cnt_reg[13]/CLR, u3/smi_config_inst/smi_inst/mdc_cnt_reg[14]/CLR, u3/smi_config_inst/smi_inst/mdc_cnt_reg[15]/CLR, u3/smi_config_inst/smi_inst/mdc_cnt_reg[1]/CLR (the first 15 of 51 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#25 Warning
+LUT drives async reset alert  
+LUT cell u4/arbi_inst/e_rst_n_INST_0, with 2 or more inputs, drives asynchronous preset/clear pin(s) u4/mac_test0/almost_full_d0_reg/CLR, u4/mac_test0/almost_full_d1_reg/CLR, u4/mac_test0/gmii_rx_dv_d0_reg/CLR, u4/mac_test0/gmii_rxd_d0_reg[0]/CLR, u4/mac_test0/gmii_rxd_d0_reg[1]/CLR, u4/mac_test0/gmii_rxd_d0_reg[2]/CLR, u4/mac_test0/gmii_rxd_d0_reg[3]/CLR, u4/mac_test0/gmii_rxd_d0_reg[4]/CLR, u4/mac_test0/gmii_rxd_d0_reg[5]/CLR, u4/mac_test0/gmii_rxd_d0_reg[6]/CLR, u4/mac_test0/gmii_rxd_d0_reg[7]/CLR, u4/mac_test0/gmii_tx_en_reg/CLR, u4/mac_test0/gmii_txd_reg[0]/CLR, u4/mac_test0/gmii_txd_reg[1]/CLR, u4/mac_test0/gmii_txd_reg[2]/CLR (the first 15 of 2746 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#26 Warning
+LUT drives async reset alert  
+LUT cell u4/arbi_inst/rx_buffer_inst/FSM_onehot_state[1]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) u4/arbi_inst/e_rst_cnt_reg[0]/CLR, u4/arbi_inst/e_rst_cnt_reg[1]/CLR, u4/arbi_inst/e_rst_cnt_reg[2]/CLR, u4/arbi_inst/e_rst_cnt_reg[3]/CLR, u4/arbi_inst/e_rst_cnt_reg[4]/CLR, u4/arbi_inst/e_rst_cnt_reg[5]/CLR, u4/arbi_inst/e_rst_cnt_reg[6]/CLR, u4/arbi_inst/e_rst_cnt_reg[7]/CLR, u4/arbi_inst/e_rx_dv_reg/CLR, u4/arbi_inst/e_rxd_reg[0]/CLR, u4/arbi_inst/e_rxd_reg[1]/CLR, u4/arbi_inst/e_rxd_reg[2]/CLR, u4/arbi_inst/e_rxd_reg[3]/CLR, u4/arbi_inst/e_rxd_reg[4]/CLR, u4/arbi_inst/e_rxd_reg[5]/CLR (the first 15 of 45 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#27 Warning
+LUT drives async reset alert  
+LUT cell u4/arbi_inst/rx_buffer_inst/rx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_3, with 2 or more inputs, drives asynchronous preset/clear pin(s) u4/arbi_inst/rx_buffer_inst/rx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[0]/CLR, u4/arbi_inst/rx_buffer_inst/rx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[10]/CLR, u4/arbi_inst/rx_buffer_inst/rx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[11]/CLR, u4/arbi_inst/rx_buffer_inst/rx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[1]/CLR, u4/arbi_inst/rx_buffer_inst/rx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[2]/CLR, u4/arbi_inst/rx_buffer_inst/rx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[3]/CLR, u4/arbi_inst/rx_buffer_inst/rx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[4]/CLR, u4/arbi_inst/rx_buffer_inst/rx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[5]/CLR, u4/arbi_inst/rx_buffer_inst/rx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[6]/CLR, u4/arbi_inst/rx_buffer_inst/rx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[7]/CLR, u4/arbi_inst/rx_buffer_inst/rx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[8]/CLR, u4/arbi_inst/rx_buffer_inst/rx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[9]/CLR, u4/arbi_inst/rx_buffer_inst/rx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_fb_i_reg/PRE, u4/arbi_inst/rx_buffer_inst/rx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_i_reg/PRE, u4/arbi_inst/rx_buffer_inst/rx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[0]/CLR (the first 15 of 62 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#28 Warning
+LUT drives async reset alert  
+LUT cell u4/arbi_inst/rx_buffer_inst/rx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram_i_3, with 2 or more inputs, drives asynchronous preset/clear pin(s) u4/arbi_inst/rx_buffer_inst/rx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[0]/CLR, u4/arbi_inst/rx_buffer_inst/rx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[1]/CLR, u4/arbi_inst/rx_buffer_inst/rx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[2]/CLR, u4/arbi_inst/rx_buffer_inst/rx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[3]/CLR, u4/arbi_inst/rx_buffer_inst/rx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[4]/CLR, u4/arbi_inst/rx_buffer_inst/rx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_fb_i_reg/PRE, u4/arbi_inst/rx_buffer_inst/rx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_i_reg/PRE, u4/arbi_inst/rx_buffer_inst/rx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[0]/CLR, u4/arbi_inst/rx_buffer_inst/rx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[1]/CLR, u4/arbi_inst/rx_buffer_inst/rx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[2]/CLR, u4/arbi_inst/rx_buffer_inst/rx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[3]/CLR, u4/arbi_inst/rx_buffer_inst/rx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[4]/CLR, u4/arbi_inst/rx_buffer_inst/rx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_reg[1]/CLR, u4/arbi_inst/rx_buffer_inst/rx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_reg[2]/CLR, u4/arbi_inst/rx_buffer_inst/rx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_reg[3]/CLR (the first 15 of 27 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#29 Warning
+LUT drives async reset alert  
+LUT cell u4/arbi_inst/tx_buffer_inst/tx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_3, with 2 or more inputs, drives asynchronous preset/clear pin(s) u4/arbi_inst/tx_buffer_inst/tx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[0]/CLR, u4/arbi_inst/tx_buffer_inst/tx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[10]/CLR, u4/arbi_inst/tx_buffer_inst/tx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[11]/CLR, u4/arbi_inst/tx_buffer_inst/tx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[1]/CLR, u4/arbi_inst/tx_buffer_inst/tx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[2]/CLR, u4/arbi_inst/tx_buffer_inst/tx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[3]/CLR, u4/arbi_inst/tx_buffer_inst/tx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[4]/CLR, u4/arbi_inst/tx_buffer_inst/tx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[5]/CLR, u4/arbi_inst/tx_buffer_inst/tx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[6]/CLR, u4/arbi_inst/tx_buffer_inst/tx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[7]/CLR, u4/arbi_inst/tx_buffer_inst/tx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[8]/CLR, u4/arbi_inst/tx_buffer_inst/tx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[9]/CLR, u4/arbi_inst/tx_buffer_inst/tx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_fb_i_reg/PRE, u4/arbi_inst/tx_buffer_inst/tx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_i_reg/PRE, u4/arbi_inst/tx_buffer_inst/tx_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[0]/CLR (the first 15 of 62 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#30 Warning
+LUT drives async reset alert  
+LUT cell u4/arbi_inst/tx_buffer_inst/tx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram_i_3, with 2 or more inputs, drives asynchronous preset/clear pin(s) u4/arbi_inst/tx_buffer_inst/tx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[0]/CLR, u4/arbi_inst/tx_buffer_inst/tx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[1]/CLR, u4/arbi_inst/tx_buffer_inst/tx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[2]/CLR, u4/arbi_inst/tx_buffer_inst/tx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[3]/CLR, u4/arbi_inst/tx_buffer_inst/tx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/gsym_dc.dc/count_reg[4]/CLR, u4/arbi_inst/tx_buffer_inst/tx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_fb_i_reg/PRE, u4/arbi_inst/tx_buffer_inst/tx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_i_reg/PRE, u4/arbi_inst/tx_buffer_inst/tx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[0]/CLR, u4/arbi_inst/tx_buffer_inst/tx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[1]/CLR, u4/arbi_inst/tx_buffer_inst/tx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[2]/CLR, u4/arbi_inst/tx_buffer_inst/tx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[3]/CLR, u4/arbi_inst/tx_buffer_inst/tx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[4]/CLR, u4/arbi_inst/tx_buffer_inst/tx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_reg[1]/CLR, u4/arbi_inst/tx_buffer_inst/tx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_reg[2]/CLR, u4/arbi_inst/tx_buffer_inst/tx_len_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_reg[3]/CLR (the first 15 of 27 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#31 Warning
+LUT drives async reset alert  
+LUT cell u4/reset_m0/cnt[0]_i_1__2, with 2 or more inputs, drives asynchronous preset/clear pin(s) u4/smi_config_inst/FSM_sequential_state_reg[3]/CLR, u4/smi_config_inst/led_reg[1]/CLR, u4/smi_config_inst/led_reg[2]/CLR, u4/smi_config_inst/link_reg/CLR, u4/smi_config_inst/phy_addr_reg[0]/CLR, u4/smi_config_inst/phy_init_end_reg/CLR, u4/smi_config_inst/read_req_reg/CLR, u4/smi_config_inst/reg_addr_reg[0]/CLR, u4/smi_config_inst/reg_addr_reg[4]/CLR, u4/smi_config_inst/timer_reg[0]/CLR, u4/smi_config_inst/timer_reg[10]/CLR, u4/smi_config_inst/timer_reg[11]/CLR, u4/smi_config_inst/timer_reg[12]/CLR, u4/smi_config_inst/timer_reg[13]/CLR, u4/smi_config_inst/timer_reg[14]/CLR (the first 15 of 72 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#32 Warning
+LUT drives async reset alert  
+LUT cell u4/smi_config_inst/smi_inst/mdc_i_3, with 2 or more inputs, drives asynchronous preset/clear pin(s) u4/smi_config_inst/smi_inst/FSM_onehot_state_reg[1]/CLR, u4/smi_config_inst/smi_inst/FSM_onehot_state_reg[2]/CLR, u4/smi_config_inst/smi_inst/FSM_onehot_state_reg[3]/CLR, u4/smi_config_inst/smi_inst/FSM_onehot_state_reg[4]/CLR, u4/smi_config_inst/smi_inst/FSM_onehot_state_reg[5]/CLR, u4/smi_config_inst/smi_inst/FSM_onehot_state_reg[6]/CLR, u4/smi_config_inst/smi_inst/done_reg/CLR, u4/smi_config_inst/smi_inst/mdc_cnt_reg[0]/CLR, u4/smi_config_inst/smi_inst/mdc_cnt_reg[10]/CLR, u4/smi_config_inst/smi_inst/mdc_cnt_reg[11]/CLR, u4/smi_config_inst/smi_inst/mdc_cnt_reg[12]/CLR, u4/smi_config_inst/smi_inst/mdc_cnt_reg[13]/CLR, u4/smi_config_inst/smi_inst/mdc_cnt_reg[14]/CLR, u4/smi_config_inst/smi_inst/mdc_cnt_reg[15]/CLR, u4/smi_config_inst/smi_inst/mdc_cnt_reg[1]/CLR (the first 15 of 51 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+TIMING-9#1 Warning
+Unknown CDC Logic  
+One or more asynchronous Clock Domain Crossing has been detected between 2 clock domains through a set_false_path or a set_clock_groups or set_max_delay -datapath_only constraint but no double-registers logic synchronizer has been found on the side of the capture clock. It is recommended to run report_cdc for a complete and detailed CDC coverage. Please consider using XPM_CDC to avoid Critical severities
+Related violations: <none>
+
+TIMING-10#1 Warning
+Missing property on synchronizer  
+One or more logic synchronizer has been detected between 2 clock domains but the synchronizer does not have the property ASYNC_REG defined on one or both registers. It is recommended to run report_cdc for a complete and detailed CDC coverage
+Related violations: <none>
+
+TIMING-18#1 Warning
+Missing input or output delay  
+An input delay is missing on e1_mdio relative to clock(s) sys_clk_in
+Related violations: <none>
+
+TIMING-18#2 Warning
+Missing input or output delay  
+An input delay is missing on e1_rrxd[0] relative to clock(s) e1_rrxc
+Related violations: <none>
+
+TIMING-18#3 Warning
+Missing input or output delay  
+An input delay is missing on e1_rrxd[1] relative to clock(s) e1_rrxc
+Related violations: <none>
+
+TIMING-18#4 Warning
+Missing input or output delay  
+An input delay is missing on e1_rrxd[2] relative to clock(s) e1_rrxc
+Related violations: <none>
+
+TIMING-18#5 Warning
+Missing input or output delay  
+An input delay is missing on e1_rrxd[3] relative to clock(s) e1_rrxc
+Related violations: <none>
+
+TIMING-18#6 Warning
+Missing input or output delay  
+An input delay is missing on e1_rrxdv relative to clock(s) e1_rrxc
+Related violations: <none>
+
+TIMING-18#7 Warning
+Missing input or output delay  
+An input delay is missing on e2_mdio relative to clock(s) sys_clk_in
+Related violations: <none>
+
+TIMING-18#8 Warning
+Missing input or output delay  
+An input delay is missing on e2_rrxd[0] relative to clock(s) e2_rrxc
+Related violations: <none>
+
+TIMING-18#9 Warning
+Missing input or output delay  
+An input delay is missing on e2_rrxd[1] relative to clock(s) e2_rrxc
+Related violations: <none>
+
+TIMING-18#10 Warning
+Missing input or output delay  
+An input delay is missing on e2_rrxd[2] relative to clock(s) e2_rrxc
+Related violations: <none>
+
+TIMING-18#11 Warning
+Missing input or output delay  
+An input delay is missing on e2_rrxd[3] relative to clock(s) e2_rrxc
+Related violations: <none>
+
+TIMING-18#12 Warning
+Missing input or output delay  
+An input delay is missing on e2_rrxdv relative to clock(s) e2_rrxc
+Related violations: <none>
+
+TIMING-18#13 Warning
+Missing input or output delay  
+An input delay is missing on e3_mdio relative to clock(s) sys_clk_in
+Related violations: <none>
+
+TIMING-18#14 Warning
+Missing input or output delay  
+An input delay is missing on e3_rrxd[0] relative to clock(s) e3_rrxc
+Related violations: <none>
+
+TIMING-18#15 Warning
+Missing input or output delay  
+An input delay is missing on e3_rrxd[1] relative to clock(s) e3_rrxc
+Related violations: <none>
+
+TIMING-18#16 Warning
+Missing input or output delay  
+An input delay is missing on e3_rrxd[2] relative to clock(s) e3_rrxc
+Related violations: <none>
+
+TIMING-18#17 Warning
+Missing input or output delay  
+An input delay is missing on e3_rrxd[3] relative to clock(s) e3_rrxc
+Related violations: <none>
+
+TIMING-18#18 Warning
+Missing input or output delay  
+An input delay is missing on e3_rrxdv relative to clock(s) e3_rrxc
+Related violations: <none>
+
+TIMING-18#19 Warning
+Missing input or output delay  
+An input delay is missing on e4_mdio relative to clock(s) sys_clk_in
+Related violations: <none>
+
+TIMING-18#20 Warning
+Missing input or output delay  
+An input delay is missing on e4_rrxd[0] relative to clock(s) e4_rrxc
+Related violations: <none>
+
+TIMING-18#21 Warning
+Missing input or output delay  
+An input delay is missing on e4_rrxd[1] relative to clock(s) e4_rrxc
+Related violations: <none>
+
+TIMING-18#22 Warning
+Missing input or output delay  
+An input delay is missing on e4_rrxd[2] relative to clock(s) e4_rrxc
+Related violations: <none>
+
+TIMING-18#23 Warning
+Missing input or output delay  
+An input delay is missing on e4_rrxd[3] relative to clock(s) e4_rrxc
+Related violations: <none>
+
+TIMING-18#24 Warning
+Missing input or output delay  
+An input delay is missing on e4_rrxdv relative to clock(s) e4_rrxc
+Related violations: <none>
+
+TIMING-18#25 Warning
+Missing input or output delay  
+An input delay is missing on rst_n relative to clock(s) e1_rrxc, e2_rrxc, e3_rrxc, e4_rrxc, sys_clk_in
+Related violations: <none>
+
+TIMING-18#26 Warning
+Missing input or output delay  
+An output delay is missing on e1_mdc relative to clock(s) sys_clk_in
+Related violations: <none>
+
+TIMING-18#27 Warning
+Missing input or output delay  
+An output delay is missing on e1_reset relative to clock(s) sys_clk_in
+Related violations: <none>
+
+TIMING-18#28 Warning
+Missing input or output delay  
+An output delay is missing on e1_rtxc relative to clock(s) e1_rrxc
+Related violations: <none>
+
+TIMING-18#29 Warning
+Missing input or output delay  
+An output delay is missing on e1_rtxd[0] relative to clock(s) e1_rrxc
+Related violations: <none>
+
+TIMING-18#30 Warning
+Missing input or output delay  
+An output delay is missing on e1_rtxd[1] relative to clock(s) e1_rrxc
+Related violations: <none>
+
+TIMING-18#31 Warning
+Missing input or output delay  
+An output delay is missing on e1_rtxd[2] relative to clock(s) e1_rrxc
+Related violations: <none>
+
+TIMING-18#32 Warning
+Missing input or output delay  
+An output delay is missing on e1_rtxd[3] relative to clock(s) e1_rrxc
+Related violations: <none>
+
+TIMING-18#33 Warning
+Missing input or output delay  
+An output delay is missing on e1_rtxen relative to clock(s) e1_rrxc
+Related violations: <none>
+
+TIMING-18#34 Warning
+Missing input or output delay  
+An output delay is missing on e2_mdc relative to clock(s) sys_clk_in
+Related violations: <none>
+
+TIMING-18#35 Warning
+Missing input or output delay  
+An output delay is missing on e2_reset relative to clock(s) sys_clk_in
+Related violations: <none>
+
+TIMING-18#36 Warning
+Missing input or output delay  
+An output delay is missing on e2_rtxc relative to clock(s) e2_rrxc
+Related violations: <none>
+
+TIMING-18#37 Warning
+Missing input or output delay  
+An output delay is missing on e2_rtxd[0] relative to clock(s) e2_rrxc
+Related violations: <none>
+
+TIMING-18#38 Warning
+Missing input or output delay  
+An output delay is missing on e2_rtxd[1] relative to clock(s) e2_rrxc
+Related violations: <none>
+
+TIMING-18#39 Warning
+Missing input or output delay  
+An output delay is missing on e2_rtxd[2] relative to clock(s) e2_rrxc
+Related violations: <none>
+
+TIMING-18#40 Warning
+Missing input or output delay  
+An output delay is missing on e2_rtxd[3] relative to clock(s) e2_rrxc
+Related violations: <none>
+
+TIMING-18#41 Warning
+Missing input or output delay  
+An output delay is missing on e2_rtxen relative to clock(s) e2_rrxc
+Related violations: <none>
+
+TIMING-18#42 Warning
+Missing input or output delay  
+An output delay is missing on e3_mdc relative to clock(s) sys_clk_in
+Related violations: <none>
+
+TIMING-18#43 Warning
+Missing input or output delay  
+An output delay is missing on e3_reset relative to clock(s) sys_clk_in
+Related violations: <none>
+
+TIMING-18#44 Warning
+Missing input or output delay  
+An output delay is missing on e3_rtxc relative to clock(s) e3_rrxc
+Related violations: <none>
+
+TIMING-18#45 Warning
+Missing input or output delay  
+An output delay is missing on e3_rtxd[0] relative to clock(s) e3_rrxc
+Related violations: <none>
+
+TIMING-18#46 Warning
+Missing input or output delay  
+An output delay is missing on e3_rtxd[1] relative to clock(s) e3_rrxc
+Related violations: <none>
+
+TIMING-18#47 Warning
+Missing input or output delay  
+An output delay is missing on e3_rtxd[2] relative to clock(s) e3_rrxc
+Related violations: <none>
+
+TIMING-18#48 Warning
+Missing input or output delay  
+An output delay is missing on e3_rtxd[3] relative to clock(s) e3_rrxc
+Related violations: <none>
+
+TIMING-18#49 Warning
+Missing input or output delay  
+An output delay is missing on e3_rtxen relative to clock(s) e3_rrxc
+Related violations: <none>
+
+TIMING-18#50 Warning
+Missing input or output delay  
+An output delay is missing on e4_mdc relative to clock(s) sys_clk_in
+Related violations: <none>
+
+TIMING-18#51 Warning
+Missing input or output delay  
+An output delay is missing on e4_reset relative to clock(s) sys_clk_in
+Related violations: <none>
+
+TIMING-18#52 Warning
+Missing input or output delay  
+An output delay is missing on e4_rtxc relative to clock(s) e4_rrxc
+Related violations: <none>
+
+TIMING-18#53 Warning
+Missing input or output delay  
+An output delay is missing on e4_rtxd[0] relative to clock(s) e4_rrxc
+Related violations: <none>
+
+TIMING-18#54 Warning
+Missing input or output delay  
+An output delay is missing on e4_rtxd[1] relative to clock(s) e4_rrxc
+Related violations: <none>
+
+TIMING-18#55 Warning
+Missing input or output delay  
+An output delay is missing on e4_rtxd[2] relative to clock(s) e4_rrxc
+Related violations: <none>
+
+TIMING-18#56 Warning
+Missing input or output delay  
+An output delay is missing on e4_rtxd[3] relative to clock(s) e4_rrxc
+Related violations: <none>
+
+TIMING-18#57 Warning
+Missing input or output delay  
+An output delay is missing on e4_rtxen relative to clock(s) e4_rrxc
+Related violations: <none>
+
+TIMING-18#58 Warning
+Missing input or output delay  
+An output delay is missing on led[0] relative to clock(s) sys_clk_in
+Related violations: <none>
+
+TIMING-18#59 Warning
+Missing input or output delay  
+An output delay is missing on led[1] relative to clock(s) sys_clk_in
+Related violations: <none>
+
+TIMING-20#1 Warning
+Non-clocked latch  
+The latch u1/smi_config_inst/smi_inst/mdio_en_reg cannot be properly analyzed as its control pin u1/smi_config_inst/smi_inst/mdio_en_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#2 Warning
+Non-clocked latch  
+The latch u2/smi_config_inst/smi_inst/mdio_en_reg cannot be properly analyzed as its control pin u2/smi_config_inst/smi_inst/mdio_en_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#3 Warning
+Non-clocked latch  
+The latch u3/smi_config_inst/smi_inst/mdio_en_reg cannot be properly analyzed as its control pin u3/smi_config_inst/smi_inst/mdio_en_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#4 Warning
+Non-clocked latch  
+The latch u4/smi_config_inst/smi_inst/mdio_en_reg cannot be properly analyzed as its control pin u4/smi_config_inst/smi_inst/mdio_en_reg/G is not reached by a timing clock
+Related violations: <none>
+
+

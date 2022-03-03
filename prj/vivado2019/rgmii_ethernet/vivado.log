@@ -1,0 +1,321 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Thu Mar  3 13:24:58 2022
+# Process ID: 28712
+# Current directory: D:/Work/Embedded/FPGA/Program/MAC/prj/ethernet_test/rgmii_ethernet
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent27732 D:\Work\Embedded\FPGA\Program\MAC\prj\ethernet_test\rgmii_ethernet\eth_test.xpr
+# Log file: D:/Work/Embedded/FPGA/Program/MAC/prj/ethernet_test/rgmii_ethernet/vivado.log
+# Journal file: D:/Work/Embedded/FPGA/Program/MAC/prj/ethernet_test/rgmii_ethernet\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/Work/Embedded/FPGA/Program/MAC/prj/ethernet_test/rgmii_ethernet/eth_test.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Soft/Xilinx/Vivado/2019.1/data/ip'.
+WARNING: [IP_Flow 19-2162] IP 'eth_data_fifo' is locked:
+* Current project part 'xc7z020clg484-2' and the part 'xc7a100tfgg484-2' used to customize the IP 'eth_data_fifo' do not match.
+WARNING: [IP_Flow 19-2162] IP 'icmp_rx_ram_8_256' is locked:
+* Current project part 'xc7z020clg484-2' and the part 'xc7a100tfgg484-2' used to customize the IP 'icmp_rx_ram_8_256' do not match.
+WARNING: [IP_Flow 19-2162] IP 'len_fifo' is locked:
+* Current project part 'xc7z020clg484-2' and the part 'xc7a100tfgg484-2' used to customize the IP 'len_fifo' do not match.
+WARNING: [IP_Flow 19-2162] IP 'udp_checksum_fifo' is locked:
+* Current project part 'xc7z020clg484-2' and the part 'xc7a100tfgg484-2' used to customize the IP 'udp_checksum_fifo' do not match.
+WARNING: [IP_Flow 19-2162] IP 'udp_rx_ram_8_2048' is locked:
+* Current project part 'xc7z020clg484-2' and the part 'xc7a100tfgg484-2' used to customize the IP 'udp_rx_ram_8_2048' do not match.
+WARNING: [IP_Flow 19-2162] IP 'udp_tx_data_fifo' is locked:
+* Current project part 'xc7z020clg484-2' and the part 'xc7a100tfgg484-2' used to customize the IP 'udp_tx_data_fifo' do not match.
+open_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:08 . Memory (MB): peak = 857.855 ; gain = 161.863
+update_compile_order -fileset sources_1
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2019.1
+  **** Build date : May 24 2019 at 15:13:31
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210512180081
+open_hw_target: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 2159.996 ; gain = 1127.438
+set_property PROGRAM.FILE {D:/Work/Embedded/FPGA/Program/MAC/prj/ethernet_test/rgmii_ethernet/eth_test.runs/impl_1/ethernet_4port.bit} [get_hw_devices xc7z020_1]
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-1435] Device xc7z020 (JTAG device index = 1) is not programmed (DONE status = 0).
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {D:/Work/Embedded/FPGA/Program/MAC/prj/ethernet_test/rgmii_ethernet/eth_test.runs/impl_1/ethernet_4port.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+disconnect_hw_server localhost:3121
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210512180081
+set_property PROGRAM.FILE {D:/Work/Embedded/FPGA/Program/MAC/prj/ethernet_test/rgmii_ethernet/eth_test.runs/impl_1/ethernet_4port.bit} [get_hw_devices xc7z020_1]
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {D:/Work/Embedded/FPGA/Program/MAC/prj/ethernet_test/rgmii_ethernet/eth_test.runs/impl_1/ethernet_4port.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+close_hw_target {localhost:3121/xilinx_tcf/Digilent/210512180081}
+INFO: [Labtoolstcl 44-464] Closing hw_target localhost:3121/xilinx_tcf/Digilent/210512180081
+disconnect_hw_server localhost:3121
+reset_run eth_data_fifo_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/Work/Embedded/FPGA/Program/MAC/prj/ethernet_test/rgmii_ethernet/eth_test.runs/eth_data_fifo_synth_1
+
+reset_run icmp_rx_ram_8_256_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/Work/Embedded/FPGA/Program/MAC/prj/ethernet_test/rgmii_ethernet/eth_test.runs/icmp_rx_ram_8_256_synth_1
+
+reset_run len_fifo_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/Work/Embedded/FPGA/Program/MAC/prj/ethernet_test/rgmii_ethernet/eth_test.runs/len_fifo_synth_1
+
+reset_run udp_checksum_fifo_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/Work/Embedded/FPGA/Program/MAC/prj/ethernet_test/rgmii_ethernet/eth_test.runs/udp_checksum_fifo_synth_1
+
+reset_run udp_rx_ram_8_2048_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/Work/Embedded/FPGA/Program/MAC/prj/ethernet_test/rgmii_ethernet/eth_test.runs/udp_rx_ram_8_2048_synth_1
+
+reset_run udp_tx_data_fifo_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/Work/Embedded/FPGA/Program/MAC/prj/ethernet_test/rgmii_ethernet/eth_test.runs/udp_tx_data_fifo_synth_1
+
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/Work/Embedded/FPGA/Program/MAC/prj/ethernet_test/rgmii_ethernet/eth_test.runs/synth_1
+
+launch_runs impl_1 -jobs 16
+WARNING: [Project 1-577] IP run eth_data_fifo_synth_1 is available but is out of date. Since the IP is locked, the synthesis checkpoint cannot be updated. The out-of-date checkpoint will be used and it may result in incorrect behavior.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run the Tcl command 'report_ip_status' for more information.
+WARNING: [Project 1-577] IP run icmp_rx_ram_8_256_synth_1 is available but is out of date. Since the IP is locked, the synthesis checkpoint cannot be updated. The out-of-date checkpoint will be used and it may result in incorrect behavior.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run the Tcl command 'report_ip_status' for more information.
+WARNING: [Project 1-577] IP run len_fifo_synth_1 is available but is out of date. Since the IP is locked, the synthesis checkpoint cannot be updated. The out-of-date checkpoint will be used and it may result in incorrect behavior.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run the Tcl command 'report_ip_status' for more information.
+WARNING: [Project 1-577] IP run udp_checksum_fifo_synth_1 is available but is out of date. Since the IP is locked, the synthesis checkpoint cannot be updated. The out-of-date checkpoint will be used and it may result in incorrect behavior.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run the Tcl command 'report_ip_status' for more information.
+WARNING: [Project 1-577] IP run udp_rx_ram_8_2048_synth_1 is available but is out of date. Since the IP is locked, the synthesis checkpoint cannot be updated. The out-of-date checkpoint will be used and it may result in incorrect behavior.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run the Tcl command 'report_ip_status' for more information.
+WARNING: [Project 1-577] IP run udp_tx_data_fifo_synth_1 is available but is out of date. Since the IP is locked, the synthesis checkpoint cannot be updated. The out-of-date checkpoint will be used and it may result in incorrect behavior.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run the Tcl command 'report_ip_status' for more information.
+WARNING: [Runs 36-337] The following IPs are either missing output products or output products are not up-to-date for Synthesis target. Since these IPs are locked, no update to the output products can be done. 
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+D:/Work/Embedded/FPGA/Program/MAC/prj/ethernet_test/rgmii_ethernet/eth_test.srcs/sources_1/ip/eth_data_fifo/eth_data_fifo.xci
+
+WARNING: [Runs 36-337] The following IPs are either missing output products or output products are not up-to-date for Synthesis target. Since these IPs are locked, no update to the output products can be done. 
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+D:/Work/Embedded/FPGA/Program/MAC/prj/ethernet_test/rgmii_ethernet/eth_test.srcs/sources_1/ip/icmp_rx_ram_8_256/icmp_rx_ram_8_256.xci
+
+WARNING: [Runs 36-337] The following IPs are either missing output products or output products are not up-to-date for Synthesis target. Since these IPs are locked, no update to the output products can be done. 
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+D:/Work/Embedded/FPGA/Program/MAC/prj/ethernet_test/rgmii_ethernet/eth_test.srcs/sources_1/ip/len_fifo/len_fifo.xci
+
+WARNING: [Runs 36-337] The following IPs are either missing output products or output products are not up-to-date for Synthesis target. Since these IPs are locked, no update to the output products can be done. 
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+D:/Work/Embedded/FPGA/Program/MAC/prj/ethernet_test/rgmii_ethernet/eth_test.srcs/sources_1/ip/udp_checksum_fifo/udp_checksum_fifo.xci
+
+WARNING: [Runs 36-337] The following IPs are either missing output products or output products are not up-to-date for Synthesis target. Since these IPs are locked, no update to the output products can be done. 
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+D:/Work/Embedded/FPGA/Program/MAC/prj/ethernet_test/rgmii_ethernet/eth_test.srcs/sources_1/ip/udp_rx_ram_8_2048/udp_rx_ram_8_2048.xci
+
+WARNING: [Runs 36-337] The following IPs are either missing output products or output products are not up-to-date for Synthesis target. Since these IPs are locked, no update to the output products can be done. 
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+D:/Work/Embedded/FPGA/Program/MAC/prj/ethernet_test/rgmii_ethernet/eth_test.srcs/sources_1/ip/udp_tx_data_fifo/udp_tx_data_fifo.xci
+
+WARNING: [Project 1-576] IP 'D:/Work/Embedded/FPGA/Program/MAC/prj/ethernet_test/rgmii_ethernet/eth_test.srcs/sources_1/ip/eth_data_fifo/eth_data_fifo.xci' in run eth_data_fifo_synth_1 is locked, no out-of-context (OOC) run will be launched. The run may not be able to complete.
+Please select 'Report IP Status' from 'Tools/Report' or run the Tcl command 'report_ip_status' for more information.
+WARNING: [Project 1-576] IP 'D:/Work/Embedded/FPGA/Program/MAC/prj/ethernet_test/rgmii_ethernet/eth_test.srcs/sources_1/ip/icmp_rx_ram_8_256/icmp_rx_ram_8_256.xci' in run icmp_rx_ram_8_256_synth_1 is locked, no out-of-context (OOC) run will be launched. The run may not be able to complete.
+Please select 'Report IP Status' from 'Tools/Report' or run the Tcl command 'report_ip_status' for more information.
+WARNING: [Project 1-576] IP 'D:/Work/Embedded/FPGA/Program/MAC/prj/ethernet_test/rgmii_ethernet/eth_test.srcs/sources_1/ip/len_fifo/len_fifo.xci' in run len_fifo_synth_1 is locked, no out-of-context (OOC) run will be launched. The run may not be able to complete.
+Please select 'Report IP Status' from 'Tools/Report' or run the Tcl command 'report_ip_status' for more information.
+WARNING: [Project 1-576] IP 'D:/Work/Embedded/FPGA/Program/MAC/prj/ethernet_test/rgmii_ethernet/eth_test.srcs/sources_1/ip/udp_checksum_fifo/udp_checksum_fifo.xci' in run udp_checksum_fifo_synth_1 is locked, no out-of-context (OOC) run will be launched. The run may not be able to complete.
+Please select 'Report IP Status' from 'Tools/Report' or run the Tcl command 'report_ip_status' for more information.
+WARNING: [Project 1-576] IP 'D:/Work/Embedded/FPGA/Program/MAC/prj/ethernet_test/rgmii_ethernet/eth_test.srcs/sources_1/ip/udp_rx_ram_8_2048/udp_rx_ram_8_2048.xci' in run udp_rx_ram_8_2048_synth_1 is locked, no out-of-context (OOC) run will be launched. The run may not be able to complete.
+Please select 'Report IP Status' from 'Tools/Report' or run the Tcl command 'report_ip_status' for more information.
+WARNING: [Project 1-576] IP 'D:/Work/Embedded/FPGA/Program/MAC/prj/ethernet_test/rgmii_ethernet/eth_test.srcs/sources_1/ip/udp_tx_data_fifo/udp_tx_data_fifo.xci' in run udp_tx_data_fifo_synth_1 is locked, no out-of-context (OOC) run will be launched. The run may not be able to complete.
+Please select 'Report IP Status' from 'Tools/Report' or run the Tcl command 'report_ip_status' for more information.
+[Thu Mar  3 13:51:51 2022] Launched eth_data_fifo_synth_1, icmp_rx_ram_8_256_synth_1, len_fifo_synth_1, udp_checksum_fifo_synth_1, udp_rx_ram_8_2048_synth_1, udp_tx_data_fifo_synth_1, synth_1...
+Run output will be captured here:
+eth_data_fifo_synth_1: D:/Work/Embedded/FPGA/Program/MAC/prj/ethernet_test/rgmii_ethernet/eth_test.runs/eth_data_fifo_synth_1/runme.log
+icmp_rx_ram_8_256_synth_1: D:/Work/Embedded/FPGA/Program/MAC/prj/ethernet_test/rgmii_ethernet/eth_test.runs/icmp_rx_ram_8_256_synth_1/runme.log
+len_fifo_synth_1: D:/Work/Embedded/FPGA/Program/MAC/prj/ethernet_test/rgmii_ethernet/eth_test.runs/len_fifo_synth_1/runme.log
+udp_checksum_fifo_synth_1: D:/Work/Embedded/FPGA/Program/MAC/prj/ethernet_test/rgmii_ethernet/eth_test.runs/udp_checksum_fifo_synth_1/runme.log
+udp_rx_ram_8_2048_synth_1: D:/Work/Embedded/FPGA/Program/MAC/prj/ethernet_test/rgmii_ethernet/eth_test.runs/udp_rx_ram_8_2048_synth_1/runme.log
+udp_tx_data_fifo_synth_1: D:/Work/Embedded/FPGA/Program/MAC/prj/ethernet_test/rgmii_ethernet/eth_test.runs/udp_tx_data_fifo_synth_1/runme.log
+synth_1: D:/Work/Embedded/FPGA/Program/MAC/prj/ethernet_test/rgmii_ethernet/eth_test.runs/synth_1/runme.log
+[Thu Mar  3 13:51:52 2022] Launched impl_1...
+Run output will be captured here: D:/Work/Embedded/FPGA/Program/MAC/prj/ethernet_test/rgmii_ethernet/eth_test.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+[Thu Mar  3 13:56:48 2022] Launched impl_1...
+Run output will be captured here: D:/Work/Embedded/FPGA/Program/MAC/prj/ethernet_test/rgmii_ethernet/eth_test.runs/impl_1/runme.log
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2019.1
+  **** Build date : May 24 2019 at 15:13:31
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210512180081
+set_property PROGRAM.FILE {D:/Work/Embedded/FPGA/Program/MAC/prj/ethernet_test/rgmii_ethernet/eth_test.runs/impl_1/ethernet_4port.bit} [get_hw_devices xc7z020_1]
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {D:/Work/Embedded/FPGA/Program/MAC/prj/ethernet_test/rgmii_ethernet/eth_test.runs/impl_1/ethernet_4port.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+disconnect_hw_server localhost:3121
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/Work/Embedded/FPGA/Program/MAC/prj/ethernet_test/rgmii_ethernet/eth_test.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+[Thu Mar  3 14:06:42 2022] Launched synth_1...
+Run output will be captured here: D:/Work/Embedded/FPGA/Program/MAC/prj/ethernet_test/rgmii_ethernet/eth_test.runs/synth_1/runme.log
+[Thu Mar  3 14:06:42 2022] Launched impl_1...
+Run output will be captured here: D:/Work/Embedded/FPGA/Program/MAC/prj/ethernet_test/rgmii_ethernet/eth_test.runs/impl_1/runme.log
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2019.1
+  **** Build date : May 24 2019 at 15:13:31
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210512180081
+set_property PROGRAM.FILE {D:/Work/Embedded/FPGA/Program/MAC/prj/ethernet_test/rgmii_ethernet/eth_test.runs/impl_1/ethernet_4port.bit} [get_hw_devices xc7z020_1]
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {D:/Work/Embedded/FPGA/Program/MAC/prj/ethernet_test/rgmii_ethernet/eth_test.runs/impl_1/ethernet_4port.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+disconnect_hw_server localhost:3121
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/Work/Embedded/FPGA/Program/MAC/prj/ethernet_test/rgmii_ethernet/eth_test.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+[Thu Mar  3 14:18:29 2022] Launched synth_1...
+Run output will be captured here: D:/Work/Embedded/FPGA/Program/MAC/prj/ethernet_test/rgmii_ethernet/eth_test.runs/synth_1/runme.log
+[Thu Mar  3 14:18:29 2022] Launched impl_1...
+Run output will be captured here: D:/Work/Embedded/FPGA/Program/MAC/prj/ethernet_test/rgmii_ethernet/eth_test.runs/impl_1/runme.log
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2019.1
+  **** Build date : May 24 2019 at 15:13:31
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210512180081
+set_property PROGRAM.FILE {D:/Work/Embedded/FPGA/Program/MAC/prj/ethernet_test/rgmii_ethernet/eth_test.runs/impl_1/ethernet_4port.bit} [get_hw_devices xc7z020_1]
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {D:/Work/Embedded/FPGA/Program/MAC/prj/ethernet_test/rgmii_ethernet/eth_test.runs/impl_1/ethernet_4port.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+close_hw_target {localhost:3121/xilinx_tcf/Digilent/210512180081}
+INFO: [Labtoolstcl 44-464] Closing hw_target localhost:3121/xilinx_tcf/Digilent/210512180081
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/Work/Embedded/FPGA/Program/MAC/prj/ethernet_test/rgmii_ethernet/eth_test.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+[Thu Mar  3 14:37:44 2022] Launched synth_1...
+Run output will be captured here: D:/Work/Embedded/FPGA/Program/MAC/prj/ethernet_test/rgmii_ethernet/eth_test.runs/synth_1/runme.log
+[Thu Mar  3 14:37:44 2022] Launched impl_1...
+Run output will be captured here: D:/Work/Embedded/FPGA/Program/MAC/prj/ethernet_test/rgmii_ethernet/eth_test.runs/impl_1/runme.log
+disconnect_hw_server localhost:3121
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210512180081
+set_property PROGRAM.FILE {D:/Work/Embedded/FPGA/Program/MAC/prj/ethernet_test/rgmii_ethernet/eth_test.runs/impl_1/ethernet_4port.bit} [get_hw_devices xc7z020_1]
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {D:/Work/Embedded/FPGA/Program/MAC/prj/ethernet_test/rgmii_ethernet/eth_test.runs/impl_1/ethernet_4port.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+disconnect_hw_server localhost:3121
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/Work/Embedded/FPGA/Program/MAC/prj/ethernet_test/rgmii_ethernet/eth_test.runs/synth_1
+
+launch_runs impl_1 -jobs 16
+[Thu Mar  3 15:11:31 2022] Launched synth_1...
+Run output will be captured here: D:/Work/Embedded/FPGA/Program/MAC/prj/ethernet_test/rgmii_ethernet/eth_test.runs/synth_1/runme.log
+[Thu Mar  3 15:11:31 2022] Launched impl_1...
+Run output will be captured here: D:/Work/Embedded/FPGA/Program/MAC/prj/ethernet_test/rgmii_ethernet/eth_test.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+[Thu Mar  3 15:16:46 2022] Launched impl_1...
+Run output will be captured here: D:/Work/Embedded/FPGA/Program/MAC/prj/ethernet_test/rgmii_ethernet/eth_test.runs/impl_1/runme.log
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2019.1
+  **** Build date : May 24 2019 at 15:13:31
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210512180081
+set_property PROGRAM.FILE {D:/Work/Embedded/FPGA/Program/MAC/prj/ethernet_test/rgmii_ethernet/eth_test.runs/impl_1/ethernet_4port.bit} [get_hw_devices xc7z020_1]
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {D:/Work/Embedded/FPGA/Program/MAC/prj/ethernet_test/rgmii_ethernet/eth_test.runs/impl_1/ethernet_4port.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+close_hw_target {localhost:3121/xilinx_tcf/Digilent/210512180081}
+INFO: [Labtoolstcl 44-464] Closing hw_target localhost:3121/xilinx_tcf/Digilent/210512180081

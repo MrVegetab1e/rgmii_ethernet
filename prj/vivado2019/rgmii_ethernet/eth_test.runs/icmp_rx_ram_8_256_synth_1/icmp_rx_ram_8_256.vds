@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Thu Mar  3 13:51:53 2022
+# Process ID: 29924
+# Current directory: D:/Work/Embedded/FPGA/Program/MAC/prj/ethernet_test/rgmii_ethernet/eth_test.runs/icmp_rx_ram_8_256_synth_1
+# Command line: vivado.exe -log icmp_rx_ram_8_256.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source icmp_rx_ram_8_256.tcl
+# Log file: D:/Work/Embedded/FPGA/Program/MAC/prj/ethernet_test/rgmii_ethernet/eth_test.runs/icmp_rx_ram_8_256_synth_1/icmp_rx_ram_8_256.vds
+# Journal file: D:/Work/Embedded/FPGA/Program/MAC/prj/ethernet_test/rgmii_ethernet/eth_test.runs/icmp_rx_ram_8_256_synth_1\vivado.jou
+#-----------------------------------------------------------
+source icmp_rx_ram_8_256.tcl -notrace
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP icmp_rx_ram_8_256, cache-ID = 27a6395d36c90c12.
+INFO: [Common 17-206] Exiting Vivado at Thu Mar  3 13:51:59 2022...

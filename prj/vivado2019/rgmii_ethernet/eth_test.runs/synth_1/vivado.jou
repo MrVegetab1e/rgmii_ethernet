@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Thu Mar  3 15:11:33 2022
+# Process ID: 15300
+# Current directory: D:/Work/Embedded/FPGA/Program/MAC/prj/ethernet_test/rgmii_ethernet/eth_test.runs/synth_1
+# Command line: vivado.exe -log ethernet_4port.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ethernet_4port.tcl
+# Log file: D:/Work/Embedded/FPGA/Program/MAC/prj/ethernet_test/rgmii_ethernet/eth_test.runs/synth_1/ethernet_4port.vds
+# Journal file: D:/Work/Embedded/FPGA/Program/MAC/prj/ethernet_test/rgmii_ethernet/eth_test.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source ethernet_4port.tcl -notrace

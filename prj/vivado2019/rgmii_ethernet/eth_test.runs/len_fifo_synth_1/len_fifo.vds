@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Thu Mar  3 13:51:53 2022
+# Process ID: 5248
+# Current directory: D:/Work/Embedded/FPGA/Program/MAC/prj/ethernet_test/rgmii_ethernet/eth_test.runs/len_fifo_synth_1
+# Command line: vivado.exe -log len_fifo.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source len_fifo.tcl
+# Log file: D:/Work/Embedded/FPGA/Program/MAC/prj/ethernet_test/rgmii_ethernet/eth_test.runs/len_fifo_synth_1/len_fifo.vds
+# Journal file: D:/Work/Embedded/FPGA/Program/MAC/prj/ethernet_test/rgmii_ethernet/eth_test.runs/len_fifo_synth_1\vivado.jou
+#-----------------------------------------------------------
+source len_fifo.tcl -notrace
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP len_fifo, cache-ID = 0da376dcd9e5af5b.
+INFO: [Common 17-206] Exiting Vivado at Thu Mar  3 13:51:59 2022...
